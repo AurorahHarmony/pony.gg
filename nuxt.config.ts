@@ -19,5 +19,8 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      allowedHosts: ["pony.gg"],
+    },
   },
 });

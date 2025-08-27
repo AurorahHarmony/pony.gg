@@ -1,0 +1,16 @@
+services:
+  nuxt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run --token ${CF_TUNNEL_TOKEN_PROD}
+    restart: unless-stopped
+    depends_on:
+      - nuxt
