@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
-      link: [{ rel: "icon", href: "/icon.svg" }],
+      link: [{ rel: "icon", href: "/img/favicon.png" }],
     },
   },
   compatibilityDate: "2025-07-15",
